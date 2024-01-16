@@ -10,7 +10,7 @@ public class Q14_4Sum {
     }
 
     static List<List<Integer>> fourSum(int[] nums, int target) {
-        List<List<Integer>> ans = new ArrayList();
+        List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
         long sum = 0;
         long temp; // n4 = target - (n1 + n2 + n3)
