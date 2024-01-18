@@ -13,13 +13,13 @@ public class Q14_4Sum {
         List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
         long sum = 0;
-        long temp; // n4 = target - (n1 + n2 + n3)
+        long temp; // (n3 + n4) = target - (n1 + n2 + n3)
 
         for (int i = 0; i < nums.length - 3; i++) {
             if (i == 0 || nums[i] != nums[i - 1]) {
                 for (int j = i + 1; j < nums.length - 2; j++) {
                     if (j == i + 1 || nums[j] != nums[j - 1]) { //Skip the duplicates
-                        temp = (long) target - (long) nums[i] - (long) nums[j]; //n4 value assign
+                        temp = (long) target - (long) nums[i] - (long) nums[j]; //(n3 + n4) value assign
                         int k = j + 1; //start pointer
                         int l = nums.length - 1;//end pointer
 
