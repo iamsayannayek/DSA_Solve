@@ -2,20 +2,25 @@ package Ch2_StringQs;
 
 public class Q31_IndexOfFirstOccurrenceInAString {
     public static void main(String[] args) {
+        String heyStack = "sadbutsad";
+        String needle = "sad";
 
+        System.out.println(strStr(heyStack, needle));
     }
 
-    static int strStr(String haystack, String needle) {
-        int haylength = haystack.length();
-        int needlelength = needle.length();
-        if(haylength<needlelength)
-            return -1;
-        for(int i=0;i<=haystack.length()-needle.length();i++){
-            int j=0;
-            while(j<needle.length() && haystack.charAt(i+j)==needle.charAt(j))
-                j++;
-            if(j==needle.length()){
-                return i;
+    static int strStr(String s1, String s2) {
+        int m = s1.length();
+        int n = s2.length();
+
+        for(int i=0; i<=m-n; i++){
+            for(int j=0; j<n; j++){
+                if(s1.charAt(i+j)!=s2.charAt(j)){
+                    break;
+                }
+
+                if(j==(n-1)){
+                    return i;
+                }
             }
         }
         return -1;
