@@ -6,23 +6,21 @@ import java.util.Map;
 public class Q30_PrintAllDuplicates {
     public static void main(String[] args) {
         String str = "test string";
-        printDuplicates(str);
-    }
-    static void printDuplicates(String str){
-        Map<Character, Integer> charOccurrence = new HashMap<>();
-        for(int i=0; i<str.length(); i++){
-            if(charOccurrence.containsKey(str.charAt(i))){
-                charOccurrence.put(str.charAt(i), charOccurrence.get(str.charAt(i))+1);
-            }else {
-                charOccurrence.put(str.charAt(i), 1);
-            }
-        }
-
-        for(Map.Entry<Character, Integer> mapElement : charOccurrence.entrySet()){
-            if(mapElement.getValue()>1){
-                System.out.println(mapElement.getKey() + ", count= " + mapElement.getValue());
-            }
-        }
+        printDups(str);
     }
 
+    static void printDups(String str){
+        Map<Character, Integer> count = new HashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            if(count.containsKey(str.charAt(i)))
+                count.put(str.charAt(i) , count.get(str.charAt(i))+1);
+            else count.put(str.charAt(i),1);
+            //increase the count of characters by 1
+        }
+
+        for (Map.Entry<Character,Integer> mapElement : count.entrySet()) {   //iterating through the unordered map
+            if (mapElement.getValue() > 1)   //if the count of characters is greater than 1 then duplicate found
+                System.out.println(mapElement.getKey() + ", count = " + mapElement.getValue());
+        }
+    }
 }
