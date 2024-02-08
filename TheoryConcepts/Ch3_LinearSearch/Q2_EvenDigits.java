@@ -18,10 +18,11 @@ public class Q2_EvenDigits {
     }
 
     static boolean even(int digit){
-        int numOfDigits = digits(digit);
+        int numOfDigits = digits2(digit);
         return numOfDigits % 2 == 0;
     }
 
+    // Method 1: Find number of digits in a Number
     static int digits(int num){
         if(num < 0){
             num = num * (-1);
@@ -34,5 +35,13 @@ public class Q2_EvenDigits {
             num = num/10;
         }
         return count;
+    }
+
+    // Method 2: Find number of digits in a Number
+    static int digits2(int num){
+        if(num < 0){
+            num = num * (-1);
+        }
+        return (int)(Math.log10(num)) + 1;
     }
 }
