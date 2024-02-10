@@ -26,7 +26,7 @@ public class Th2_SelectionSort {
 
     static int getMaxIndex(int[] arr, int start, int end){
         int max = start;
-        for(int i=0; i<end; i++){
+        for(int i=start; i<=end; i++){
             if(arr[max]<arr[i]){
                 max = i;
             }
