@@ -5,8 +5,8 @@ public class Ch1_LearnObjectClassMethods {
         Animal buzo = new Animal();
         //Object Initialization By -->
         //Method 1: By Reference Variable
-//        buzo.color = "Black";
-//        buzo.age = 10;
+        buzo.color = "Black";
+        buzo.age = 10;
 
         //Method 2: By using Method()
         buzo.initObj("black", 10);
