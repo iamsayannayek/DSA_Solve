@@ -10,5 +10,7 @@ public class Q1_NthFibonacciNumber {
             return n;
         }
         return fibonacci(n-1) + fibonacci(n-2);
+        //Here it's not a Tail Recursion because here 1st 2 function are return something then we have to add it
+        //then we return the summation of that two returned value.
     }
 }

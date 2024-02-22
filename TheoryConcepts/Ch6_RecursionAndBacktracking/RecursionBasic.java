@@ -12,6 +12,6 @@ public class RecursionBasic {
             return;
         }
         System.out.println(n);
-        print(n+1);
+        print(n+1); //This is called Tail Recursion because this is the last call function
     }
 }
