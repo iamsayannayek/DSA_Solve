@@ -1,6 +1,6 @@
 package TheoryConcepts.Ch6_RecursionAndBacktracking.Level1_Questions;
 
-public class PrintNum_1_to_N {
+public class Q2_PrintNum_1_to_N {
     public static void main(String[] args) {
         anotherWay(5);
     }
