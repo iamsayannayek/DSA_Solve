@@ -1,19 +1,51 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {2, 4, 5, 6, 8};
-        System.out.println(findSecondLargest(arr.length, arr));
+
+        System.out.println(solve("kxkszhk"));
+//        3
+//        g
+//                kxkszhk
+//        pphyki
+
     }
-    public static int findSecondLargest(int n, int[] arr) {
+    static int solve(String s) {
+
         // Write your code here.
-        Arrays.sort(arr);
-        for(int i=n-1; i>=0; i--){
-            if(arr[i] == arr[i - 1]){
-                continue;
+        int ansInc = incSlope(s);
+        int ansDec = decSlope(s);
+        int ans = 0;
+        ans = Math.max(ansInc, ansDec);
+        return ans;
+    }
+
+    static int incSlope(String s){
+        int count = 0;
+        int ans = 0;
+        for(int i=0; i<s.length()-1; i++){
+            if(s.charAt(i)<s.charAt(i+1)){
+                count++;
+                ans = count;
+            }else{
+                count = 0;
             }
-            return arr[i - 1];
         }
-        return -1;
+        return ans;
+    }
+
+    static int decSlope(String s){
+        int count = 0;
+        int ans = 0;
+        for(int i=0; i<s.length()-1; i++){
+            if(s.charAt(i)>s.charAt(i+1)){
+                count++;
+                ans = count;
+            }else{
+                count = 0;
+            }
+        }
+        return ans;
     }
 }
