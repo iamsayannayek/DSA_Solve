@@ -2,7 +2,7 @@ package TCS_NQT.Pr1_Arrays;
 
 import java.util.Arrays;
 
-public class Q5_IncreasDecreasingArray {
+public class Q6_IncreasDecreasingArray {
     public static void main(String[] args) {
         int[] arr = {4, 2, 8, 6, 15, 5, 9, 20};
         System.out.println(Arrays.toString(arr));
