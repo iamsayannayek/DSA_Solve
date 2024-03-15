@@ -1,7 +1,7 @@
 package TCS_NQT.Pr1_Arrays;
 
 import java.util.Arrays;
-
+//Ans: https://youtu.be/lzL4w624N_Y?si=gSnHYgAT68J13b0F
 public class Q8_BlockSwap {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
